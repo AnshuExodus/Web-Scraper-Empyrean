@@ -1,5 +1,5 @@
 # Web-Scraper-Empyrean
-An application to scrape and translate information off the World Wide Web (IMdB)
+An application to scrape and translate information off the World Wide Web (IMDb)
 
 This website is built on Python (3.5.2) using the Flask microframework
 
