@@ -1,1 +1,0 @@
-This is a project to scrape information of the internet
