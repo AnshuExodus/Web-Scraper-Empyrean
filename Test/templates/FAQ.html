@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>FAQs and Feedback</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--5grid--><script src="/static/5grid/viewport.js"></script><!--[if lt IE 9]><script src="css/5grid/ie.js"></script><![endif]--><link rel="stylesheet" href="/static/5grid/responsive.css" /><!--/5grid-->
+		<link rel="stylesheet" href="/static/HOMEstyle.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/style-ie9.css" /><![endif]-->
+	</head>
+	<body class="subpage">
+	
+		<!-- Header -->
+			<div id="header-wrapper">
+				<header id="header" class="5grid">
+					<div class="12u-first">
+
+						<!-- Logo -->
+							<h1><a href="#">Ethereal</a></h1>
+						
+						<!-- Nav -->
+							<nav>
+								<a href="http://localhost:5000/">Homepage</a>
+								<a href="/movies">Check Out Your Favourite Movies</a>
+								<a href="/faq">FAQs and Feedback</a>
+								<a href="/aboutus">About Us</a>
+								<a href="http://localhost:5000/logout">Logout</a>
+
+							</nav>
+					</div>
+				</header>
+			</div>
+
+		<!-- Content -->
+			<div id="content-wrapper">
+				<div id="content">
+					<div class="5grid">
+						<div class="12u-first">
+						
+							<!-- Main Content -->
+								<section>
+									<header>
+									<center><h2>FAQs</h2></center>
+									<center><h3>A few popular questions asked of us</h3></center><br>
+									<center><p>Q1. If only a part of the movie's/TV series' name is entered in the search bar, will it still give me the results?</p></center>
+									<center><p>A1. Yes. The request feature incorporated enables us to query the imdb API to fetch the nearests results.</p></center>
+									<center><p>Q2. How/where do you get your information? How accurate/reliable is it?</p></center>
+									<center><p>A2. We fetch our information from the imdb website and its API, making it a hundred percent reliable. The updates are directly fetched and queued in real time.</p></center>
+										<center><h2>Feedback</h2></center>
+										<center><h3>Tell us what you thought about Ethereal</h3></center>
+									</header>
+									<form action="/faqentry" method="POST">
+									<center><p> Your Name </p></center>
+									<center><input type = "textbox" name = "name" id = "name" placeholder="Name"></center>
+									<br>
+									<center><p> Your Email address </p></center>
+									<center><input type = "textbox" name = "email" id = "email" placeholder="Email"></center>
+									<br>
+									<center><p> Did you find this site useful?  </p></center>
+									<center><input type = "radio" name = "rad" id = "name"> Yes</center>
+									<center><input type = "radio" name = "rad" id = "name"> No</center>
+									<br>
+									<br>
+									<center><p> Please state your experience with Ethereal </p></center>
+									<center><textarea name = "experience" rows = "4" cols = "50" wrap = "virtual" id = "experience"></textarea></center>
+									<br>									
+									<center><input type = "submit" name = "submit" value = "Submit Response!" id = "submit"></center>
+									<br>
+									</form>
+
+
+									<!--p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam metus, congue 
+										vel suscipit ut, dignissim non risus. Vestibulum ante est, fringilla nec placerat 
+										eu, vestibulum vitae diam. Integer eget egestas eros. Duis enim erat, mollis quis 
+										lacinia eget, blandit nec ipsum. Donec vitae turpis ipsum. Aliquam mauris libero, 
+										sagittis in eleifend at, mattis imperdiet velit. Donec urna risus, rutrum molestie 
+										varius ac, lacinia sit amet augue. Nam ultrices elementum eros.
+									</p>
+									<p>
+										Sed faucibus viverra ligula, non varius magna semper vitae. Donec eu justo ut ipsum 
+										hendrerit congue nec eu risus. Cum sociis natoque penatibus et magnis dis parturient 
+										montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing 
+										egestas tempus. Cras convallis odio sit amet risus convallis porttitor. Integer 
+										vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam 
+										justo imperdiet vel. Proin nec dictum mi. Duis commodo enim non tellus interdum 
+										elit. Suspendisse fermentum adipiscing nisi, a tempor libero malesuada at. Morbi 
+										lacinia dui adipiscing risus eleifend tincidunt. Proin eu mauris eu tellus eleifend 
+										hendrerit.
+									</p>
+									<p>
+										Mauris sit amet tellus urna. In facilisis, tortor vitae ultricies egestas, odio 
+										mi rhoncus arcu, quis euismod felis felis et velit. Mauris varius consectetur erat 
+										egestas tempus. Cras convallis odio sit amet risus convallis porttitor. Integer 
+										vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam 
+										justo imperdiet vel. Proin nec dictum mi. Duis commodo enim non tellus interdum 
+										iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat dui auctor. 							
+									</p>
+									<p>
+										Sed faucibus viverra ligula, non varius magna semper vitae. Donec eu justo ut ipsum 
+										hendrerit congue nec eu risus. Cum sociis natoque penatibus et magnis dis parturient 
+										montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing 
+										egestas tempus. Cras convallis odio sit amet risus convallis porttitor. Integer 
+										vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam 
+										justo imperdiet vel. Proin nec dictum mi. Duis commodo enim non tellus interdum 
+										elit. Suspendisse fermentum adipiscing nisi, a tempor libero malesuada at. Morbi 
+										lacinia dui adipiscing risus eleifend tincidunt. Proin eu mauris eu tellus eleifend 
+										hendrerit.
+									</p>
+									<p>
+										Mauris sit amet tellus urna. In facilisis, tortor vitae ultricies egestas, odio 
+										mi rhoncus arcu, quis euismod felis felis et velit. Mauris varius consectetur erat 
+										egestas tempus. Cras convallis odio sit amet risus convallis porttitor. Integer 
+										vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam 
+										justo imperdiet vel. Proin nec dictum mi. Duis commodo enim non tellus interdum 
+										iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat dui auctor. 							
+									</p-->
+									<!--
+									<p>
+									    Ethereal- Real or Real.
+									    Movie Theaters demand regular visits from each of us in today’s world.
+									    However, there’s always that one small problem - Which movie to go for? 
+									    What’s trending? Which one has the highest IMDB rating? Which one has your 
+									    favorite star? Nobody likes to spend a precious three hours in watching a 
+									    movie that’s no good.
+                                        That’s where our concept comes in. Ethereal – Movie Information Management 
+                                        helps you go through all the movies sorted according to genre,
+                                    </p>
+
+                                    <p>
+                                        IMDB rating, cast and mood. Reviews by other users might help you speed up the decision process.
+                                        Music is an integral part of films. Sometimes, you might fall in love with a song being played 
+                                        but you might not know its name. We have that covered too. For every movie, a list of songs
+                                        has been prepared and sorted according to timeline.
+                                        And while you take all that you can from our application, our review and feedback system is 
+                                        always useful for the next person visiting and even more so for us.
+                                    </p>
+
+                                    <p>
+                                        This site has been developed by Anshuman Mishra and Isha Sinha, students in 3rd year
+                                        of Information Technology Branch (Information and Communication Technology department)
+                                        of Manipal Institute of Technology. 
+                                    </p>
+                                    -->
+
+								</section>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- Footer -->
+			<!--div id="footer-wrapper">
+				<footer id="footer" class="5grid">
+					<div class="8u-first">
+					
+						<!-- Links -->
+							<!--section>
+								<h2>Links to Important Stuff</h2>
+								<div class="3u-first">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+								<div class="3u">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+								<div class="3u">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+								<div class="3u">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+					<div class="4u">
+						
+						<!-- Blurb -->
+							<!--section>
+								<h2>An Informative Text Blurb</h2>
+								<p>
+									Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse eu 
+									varius nibh. Suspendisse vitae magna eget odio amet mollis. Duis neque nisi, 
+									dapibus sed mattis quis, sed rutrum accumsan sed. Suspendisse eu varius nibh 
+									lorem ipsum amet dolor sit amet lorem ipsum consequat gravida justo mollis.
+								</p>
+							</section>
+					
+					</div>
+				</footer>
+			</div>
+
+		<!-- Copyright -->
+			<!--div id="copyright">
+				(c) 2012 Untitled Website. All rights reserved. Design by <a href="http://nodethirtythree.com/">nodethirtythree</a> + <a href="http://www.freecsstemplates.org/">FCT</a>. Images by <a href="http://fotogrph.com/">Fotogrph</a>.
+			</div-->
+			<div id="footer-wrapper">
+				<footer id="footer" class="5grid">
+					<div class="8u-first">
+					
+						<!-- Links 
+							<section>
+								<h2>Links to Important Stuff</h2>
+								<div class="3u-first">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+								<div class="3u">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+								<div class="3u">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+								<div class="3u">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+					<div class="4u">
+						-->
+						<!-- Blurb --
+							<section>
+								<h2>An Informative Text Blurb</h2>
+								<p>
+									Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse eu 
+									varius nibh. Suspendisse vitae magna eget odio amet mollis. Duis neque nisi, 
+									dapibus sed mattis quis, sed rutrum accumsan sed. Suspendisse eu varius nibh 
+									lorem ipsum amet dolor sit amet lorem ipsum consequat gravida justo mollis.
+								</p>
+							</section>
+					
+					</div>
+					-->
+				</footer>
+			</div>
+			
+
+		<!-- Copyright-->
+			<div id="copyright">
+				
+			</div>
+
+
+			<center><a href="#">Ethereal <sup>®</sup> 2016, made with ♥ by Cinnamon</a></center>
+
+	</body>
+</html>
