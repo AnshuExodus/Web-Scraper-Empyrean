@@ -16,4 +16,5 @@ Dedicated to viewing and exploring television series and documentaries
 INITIATE
 --------
 CMD: python LOGIN.py
+
 BROWSER: localhost:5000/
