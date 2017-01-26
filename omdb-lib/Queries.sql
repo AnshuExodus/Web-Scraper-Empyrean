@@ -11,6 +11,7 @@ create table movie_list (
 movie_id integer primary key,
 movie_name varchar(30),
 movie_year integer,
+movie_plot text,
 unique(movie_name, movie_year)
 );
 

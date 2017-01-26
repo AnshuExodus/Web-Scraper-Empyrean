@@ -6,16 +6,14 @@ import json
 import sqlite3
 
 
-def insert_movie(newMovie, newYear):
+def insert_movie(newMovie, newYear, newPlot):
 
 	conn = sqlite3.connect('Movie.db')
 
 	newIndex = return_existing_movie_count() + 1
 	try:
 		if newYear is not "" and newMovie is not "NULL_EXCEPTION":
-			conn.execute(''' INSERT INTO MOVIE_LIST VALUES("%d","%s","%s");''' % (newIndex, newMovie, newYear))
-		elif newMovie is not "NULL_EXCEPTION":
-			conn.execute(''' INSERT INTO MOVIE_LIST VALUES("%d","%s","%s");''' % (newIndex, newMovie, "NULL"))
+			conn.execute(''' INSERT INTO MOVIE_LIST(movie_id, movie_name, movie_year, movie_plot) VALUES("%d","%s","%s","%s");''' % (newIndex, newMovie, newYear, newPlot))
 	except:
 		pass
 	conn.commit()
@@ -44,11 +42,13 @@ def movie_request(movie_name_query, movie_year_request = ""):
 		#print("The movie you searched for doesn't exist.")
 		omdb_name = "NULL_EXCEPTION"
 		omdb_year = "NULL"
+		omdb_plot = "NULL"
 	else:
 		omdb_name = json_doc[0]['Title']
-		omdb_year = json_doc[0]['Year']		
+		omdb_year = json_doc[0]['Year']	
+		omdb_plot = json_doc[0]['Plot']	
 
-	return (omdb_name,omdb_year)
+	return (omdb_name,omdb_year,omdb_plot)
 
 
 def return_existing_movie_count():
