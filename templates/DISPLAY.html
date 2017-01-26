@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Movies</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--5grid--><script src="/static/5grid/viewport.js"></script><!--[if lt IE 9]><script src="css/5grid/ie.js"></script><![endif]--><link rel="stylesheet" href="/static/5grid/responsive.css" /><!--/5grid-->
+		<link rel="stylesheet" href="/static/HOMEstyle.css?v={random}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/style-ie9.css" /><![endif]-->
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<div id="header-wrapper">
+				<header id="header" class="5grid">
+					<div class="12u-first">
+
+						<!-- Logo -->
+							<h1><a href="#">Ethereal</a></h1>
+						
+						<!-- Nav -->
+							<nav>
+								<a href="http://localhost:5000/">Homepage</a>
+								<a href="/movies">Check Out Your Favourite Movies</a>
+								<a href="/faq">FAQs and Feedback</a>
+								<a href="/aboutus">About Us</a>
+								<a href="http://localhost:5000/logout">Logout</a>
+
+							</nav>
+
+					</div>
+				</header>
+			</div>
+
+		<!-- Content -->
+			<div id="content-wrapper">
+				<div id="content">
+					<div class="5grid">
+						<div class="3u-first">
+
+							<!-- Left Sidebar -->
+								<section>
+								    <a href="#" class="bordered-feature-image"><img src="/static/images/shawshank.jpg" alt="" /><center>The Shawshank Redemption</center></a>
+								    <!--
+									<header>
+									
+										<h2></h2>
+									</header>
+									<p>
+										Vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam 
+										iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat. 							
+									</p>
+									<ul class="link-list">
+										<li><a href="#">Sed dolore viverra</a></li>
+										<li><a href="#">Ligula non varius</a></li>
+										<li><a href="#">Dis parturient montes</a></li>
+										<li><a href="#">Nascetur ridiculus</a></li>
+									</ul>
+									-->
+								</section>
+								<section>
+								    <a href="#" class="bordered-feature-image"><img src="/static/images/god.jpg" alt="" /><center>The Godfather I</center></a>
+								    <!--
+									<header>
+										<h2>Magna Phasellus</h2>
+									</header>
+									<ul class="link-list">
+										<li><a href="#">Sed dolore viverra</a></li>
+										<li><a href="#">Ligula non varius</a></li>
+										<li><a href="#">Nec sociis natoque</a></li>
+										<li><a href="#">Penatibus et magnis</a></li>
+										<li><a href="#">Dis parturient montes</a></li>
+										<li><a href="#">Nascetur ridiculus</a></li>
+									</ul>
+									-->
+								</section>
+								<section>
+								    <a href="#" class="bordered-feature-image"><img src="/static/images/godf.jpg" alt="" /><center>The Godfather II</center></a>
+								    <!--
+									<header>
+										<h2>Magna Phasellus</h2>
+									</header>
+									<ul class="link-list">
+										<li><a href="#">Sed dolore viverra</a></li>
+										<li><a href="#">Ligula non varius</a></li>
+										<li><a href="#">Nec sociis natoque</a></li>
+										<li><a href="#">Penatibus et magnis</a></li>
+										<li><a href="#">Dis parturient montes</a></li>
+										<li><a href="#">Nascetur ridiculus</a></li>
+									</ul>
+									-->
+								</section>
+								<section>
+								    <a href="#" class="bordered-feature-image"><img src="static/images/dark.jpg" alt="" /><center>The Dark Knight</center></a>
+								    <!--
+									<header>
+										<h2>Magna Phasellus</h2>
+									</header>
+									<ul class="link-list">
+										<li><a href="#">Sed dolore viverra</a></li>
+										<li><a href="#">Ligula non varius</a></li>
+										<li><a href="#">Nec sociis natoque</a></li>
+										<li><a href="#">Penatibus et magnis</a></li>
+										<li><a href="#">Dis parturient montes</a></li>
+										<li><a href="#">Nascetur ridiculus</a></li>
+									</ul>
+									-->
+								</section>
+						</div>
+						<div class="6u">
+
+							<!-- Main Content -->
+								<section>
+									<header>
+										<h2>Search your favourite movies!</h2> 
+								        <div class="button_box2">
+										<form class="form-wrapper-2 cf" action="/moviequery" method="POST">
+										<input type="text" placeholder="Enter Movie, TV Series.." name="moviereq" required>
+										<button type="submit">Search</button>
+										</form>
+										</div>
+										<!--<h3></h3>-->
+									</header>
+
+									
+
+									<p>
+									Release Date															
+           									<dt>{{ dict_movie.RD }}</dt>           				 		
+									</p>
+									<br>
+									<p id = "release"> </p>
+									<br>
+									<p>		
+									Runtime	
+											<dt>{{ dict_movie.R }}</dt>           
+									</p>
+									<br>
+									<p id = "run"> </p>
+									<br>
+									<p>
+									Genre						
+											<dt>{{ dict_movie.G }}</dt>           				 			
+									</p>
+									<br>
+									<p id = "genre"> </p>
+									<br>
+									<p>
+									Director						
+											<dt>{{ dict_movie.D }}</dt>           				 			 
+									</p>
+									<br>
+									<p id = "dirr"> </p>
+									<br>
+									<p>
+									Cast						
+											<dt>{{ dict_movie.A }}</dt>           				 			
+									</p>
+									<br>
+									<p id = "cast"> </p>
+									<br>
+									<p>
+									IMDb Rating							
+											<dt>{{ dict_movie.I }} out of {{ dict_movie.V }} votes</dt> 	
+									</p>
+									<br>
+									<p id = "imd"> </p>
+									<br>
+									<p>
+									Plot Summary						
+											<dt>{{ dict_movie.P }}</dt>
+           				 				 	
+									</p>
+									<br>
+									<p id = "plot"> </p>
+									<br>
+
+									
+
+								</section>
+
+						</div>
+						<div class="3u">
+							
+							<!-- Right Sidebar -->
+								
+								<section>
+								    <a href="#" class="bordered-feature-image"><img src="/static/images/sch.jpg" alt="" /><center>12 Angry Men</center></a>
+								    <!--
+									<header>
+										<h2>Ipsum Dolor</h2>
+									</header>
+									<p>
+										Vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam 
+										iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat. 							
+									</p>
+									<ul class="link-list">
+										<li><a href="#">Sed dolore viverra</a></li>
+										<li><a href="#">Ligula non varius</a></li>
+										<li><a href="#">Dis parturient montes</a></li>
+										<li><a href="#">Nascetur ridiculus</a></li>
+									</ul>
+									-->
+								</section>
+								<section>
+								    <a href="#" class="bordered-feature-image"><img src="/static/images/shni.jpg" alt="" /><center>Schindler's List</center></a>
+								    <!--
+									<header>
+										<h2>Ipsum Dolor</h2>
+									</header>
+									<p>
+										Vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam 
+										iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat. 							
+									</p>
+									<ul class="link-list">
+										<li><a href="#">Sed dolore viverra</a></li>
+										<li><a href="#">Ligula non varius</a></li>
+										<li><a href="#">Dis parturient montes</a></li>
+										<li><a href="#">Nascetur ridiculus</a></li>
+									</ul>
+									-->
+								</section>
+								<section>
+								    <a href="#" class="bordered-feature-image"><img src="/static/images/pulp.jpg" alt="" /><center>Pulp Fiction</center></a>
+								    <!--
+									<header>
+										<h2>Magna Phasellus</h2>
+									</header>
+									<ul class="link-list">
+										<li><a href="#">Sed dolore viverra</a></li>
+										<li><a href="#">Ligula non varius</a></li>
+										<li><a href="#">Nec sociis natoque</a></li>
+										<li><a href="#">Penatibus et magnis</a></li>
+										<li><a href="#">Dis parturient montes</a></li>
+										<li><a href="#">Nascetur ridiculus</a></li>
+									</ul>
+									-->
+								</section>
+								<section>
+								    <a href="#" class="bordered-feature-image"><img src="/static/images/lord.jpg" alt="" /><center>Lord of The Rings</center></a>
+								    <!--
+									<header>
+										<h2>Magna Phasellus</h2>
+									</header>
+									<ul class="link-list">
+										<li><a href="#">Sed dolore viverra</a></li>
+										<li><a href="#">Ligula non varius</a></li>
+										<li><a href="#">Nec sociis natoque</a></li>
+										<li><a href="#">Penatibus et magnis</a></li>
+										<li><a href="#">Dis parturient montes</a></li>
+										<li><a href="#">Nascetur ridiculus</a></li>
+									</ul>
+									-->
+								</section>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer-wrapper">
+				<footer id="footer" class="5grid">
+					<div class="8u-first">
+					
+						<!-- Links 
+							<section>
+								<h2>Links to Important Stuff</h2>
+								<div class="3u-first">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+								<div class="3u">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+								<div class="3u">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+								<div class="3u">
+									<ul class="link-list last-child">
+										<li><a href="#">Neque amet dapibus</a></li>
+										<li><a href="#">Sed mattis quis rutrum</a></li>
+										<li><a href="#">Accumsan suspendisse</a></li>
+										<li><a href="#">Eu varius vitae magna</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+					<div class="4u">
+						-->
+						<!-- Blurb --
+							<section>
+								<h2>An Informative Text Blurb</h2>
+								<p>
+									Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse eu 
+									varius nibh. Suspendisse vitae magna eget odio amet mollis. Duis neque nisi, 
+									dapibus sed mattis quis, sed rutrum accumsan sed. Suspendisse eu varius nibh 
+									lorem ipsum amet dolor sit amet lorem ipsum consequat gravida justo mollis.
+								</p>
+							</section>
+					
+					</div>
+					-->
+				</footer>
+			</div>
+			
+
+		<!-- Copyright-->
+			<div id="copyright">
+				
+			</div>
+
+
+			<center><a href="#">Ethereal <sup>®</sup> 2016, made with ♥ by Cinnamon</a></center>
+	</body>
+</html>
