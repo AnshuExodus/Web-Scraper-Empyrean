@@ -33,4 +33,4 @@ def master(movie_name, movie_year = ""):
 			Genre_Manager.insert_genre(genre.strip())
 			link_movie_genre(master_movie_name, master_movie_year, genre.strip())
 
-master('raees')			
+#master('Movie_Name')			
