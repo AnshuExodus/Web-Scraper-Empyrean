@@ -69,7 +69,13 @@ def lookForYearFromRawMovieName(movieStr):
     else:
         return None
 
+
+totalCount = len(pathlib.Path(myMovieHomeDirectory).iterdir())
+currentCount = 0.0
+
 for p in pathlib.Path(myMovieHomeDirectory).iterdir():
+    print(str((currentCount/totalCount)*100), end="")
+
     isFile = False
     finalPath = str(p)
     if p.is_file():
@@ -82,5 +88,6 @@ for p in pathlib.Path(myMovieHomeDirectory).iterdir():
         print("Looks like there was a networking error.")
     # print(rawMovieName)
     print(cleanMovieName(rawMovieName))
+    currentCount = currentCount + 1
     # print(lookForYearFromRawMovieName(rawMovieName))
     # print("\n")
