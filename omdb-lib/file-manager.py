@@ -76,7 +76,10 @@ for p in pathlib.Path(myMovieHomeDirectory).iterdir():
         finalPath = createFolderForFile(str(p))
         isFile = True
     rawMovieName = extractFolderNameFromDirectoryName(finalPath, isFile)
-    Master_Movie_Genre.master(cleanMovieName(rawMovieName), lookForYearFromRawMovieName(rawMovieName))
+    try:
+        Master_Movie_Genre.master(cleanMovieName(rawMovieName), lookForYearFromRawMovieName(rawMovieName))
+    except:
+        print("Looks like there was a networking error.")
     # print(rawMovieName)
     print(cleanMovieName(rawMovieName))
     # print(lookForYearFromRawMovieName(rawMovieName))
