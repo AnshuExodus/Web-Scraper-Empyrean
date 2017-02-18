@@ -3,7 +3,7 @@ import Genre_Manager
 import sqlite3
 
 def link_movie_genre(movie_name, movie_year, genre_name):
-	conn = sqlite3.connect('Movie.db')
+	conn = sqlite3.connect('Test.db')
 	
 	try:
 		conn.execute(''' INSERT INTO CLASS_LIST (MOVIE_ID, GENRE_ID)
