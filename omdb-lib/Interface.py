@@ -25,7 +25,7 @@ def genre_request(genre_name):
 	conn.commit()
 	conn.close()
 
-#genre_request('Genre_Name')
+genre_request('Horror')
 
 def movie_desc(movie_name):
 	conn = sqlite3.connect('Movie.db')

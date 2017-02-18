@@ -8,12 +8,13 @@ import sqlite3
 
 def insert_genre(newGenre):
 
-	conn = sqlite3.connect('Movie.db')
+	conn = sqlite3.connect('Test.db')
 
 	newIndex = return_existing_genre_count() + 1
 
 	try:
 		conn.execute(''' INSERT INTO GENRE_LIST VALUES("%d","%s");''' % (newIndex, newGenre))
+		#print('Genre list updated.')
 		
 	except:
 		#print('')
@@ -49,7 +50,7 @@ def genre_request(movie_name_query):
 
 def return_genre():
 
-	conn = sqlite3.connect('Movie.db')
+	conn = sqlite3.connect('Test.db')
 
 	cursor = conn.execute("SELECT * FROM genre_list;")
 	return cursor

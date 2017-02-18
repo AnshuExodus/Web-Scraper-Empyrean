@@ -21,9 +21,9 @@ def link_movie_genre(movie_name, movie_year, genre_name):
 
 
 def master(movie_name, movie_year = ""):
-	(master_movie_name, master_movie_year, master_movie_plot) = Movie_Manager.movie_request(movie_name, movie_year)
+	(master_movie_name,master_movie_year,master_movie_plot,master_movie_id,master_movie_released,master_movie_runtime,master_movie_director,master_movie_writer,master_movie_actors,master_movie_language,master_movie_country,master_movie_awards,master_movie_poster,master_movie_metascore,master_movie_imdbrating,master_movie_imdbvotes,master_movie_totalseasons) = Movie_Manager.movie_request(movie_name, movie_year)
 	#print("###" + master_movie_name)
-	Movie_Manager.insert_movie(master_movie_name, master_movie_year, master_movie_plot)
+	Movie_Manager.insert_movie(master_movie_name,master_movie_year,master_movie_plot,master_movie_id,master_movie_released,master_movie_runtime,master_movie_director,master_movie_writer,master_movie_actors,master_movie_language,master_movie_country,master_movie_awards,master_movie_poster,master_movie_metascore,master_movie_imdbrating,master_movie_imdbvotes,master_movie_totalseasons)
 
 	genres = Genre_Manager.genre_request(movie_name)
 

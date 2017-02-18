@@ -5,7 +5,7 @@ import pathlib
 import Master_Movie_Genre
 
 # myMovieHomeDirectory = "E:\Temp"
-myMovieHomeDirectory = "F:\Movies"
+myMovieHomeDirectory = "D:\Empyrean\Entertainment\Movies"
 slashType = "\\" # Use the other slash for Linux-based systems.
 
 
@@ -69,31 +69,31 @@ def lookForYearFromRawMovieName(movieStr):
     else:
         return None
 
-# print("Performing preliminary calculations...")
-# totalCount = 0.0
-# for p in pathlib.Path(myMovieHomeDirectory).iterdir():
-#     totalCount = totalCount + 1
-# currentCount = 0.0
+ 
+totalCount = 0.0
+for p in pathlib.Path(myMovieHomeDirectory).iterdir():
+    totalCount = totalCount + 1
+currentCount = 0.0
 
 print("Starting database updates!")
 for p in pathlib.Path(myMovieHomeDirectory).iterdir():
     percent = round((currentCount/totalCount)*100, 2)
-    print("before")
+    
     print(str(percent), end="")
-    print("after")
-
+    
     isFile = False
     finalPath = str(p)
     if p.is_file():
         finalPath = createFolderForFile(str(p))
         isFile = True
     rawMovieName = extractFolderNameFromDirectoryName(finalPath, isFile)
-    # try:
-    #     Master_Movie_Genre.master(cleanMovieName(rawMovieName), lookForYearFromRawMovieName(rawMovieName))
-    # except:
-    #     print("Looks like there was a networking error.")
+    try:
+        Master_Movie_Genre.master(cleanMovieName(rawMovieName), lookForYearFromRawMovieName(rawMovieName))
+    except:
+        print("Looks like there was a networking error.")
     
     # print(rawMovieName)
+    print("\t")
     print(cleanMovieName(rawMovieName))
     currentCount = currentCount + 1
     # print(lookForYearFromRawMovieName(rawMovieName))

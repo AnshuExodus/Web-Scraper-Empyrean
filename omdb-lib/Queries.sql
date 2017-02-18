@@ -12,6 +12,21 @@ movie_id integer primary key,
 movie_name varchar(30),
 movie_year integer,
 movie_plot text,
+
+movie_imdbid text,
+movie_released text,
+movie_runtime text,
+movie_director text,
+movie_writer text,
+movie_actors text,
+movie_lanuage text,
+movie_country text,
+movie_awards text,
+movie_poster text,
+movie_metascore text,
+movie_imdbrating text,
+movie_imdbvotes text,
+movie_totalseasons text,
 unique(movie_name, movie_year)
 );
 
